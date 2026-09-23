@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melodia</title>
+</head>
+<body>
+<h1>🎵 Melodia</h1>
+
+<button onclick="start()">شروع خواندن</button>
+
+<p id="note">نت: -</p>
+
+<script>
+async function start() {
+  const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+  document.getElementById("note").innerHTML = "میکروفون فعال شد 🎤";
+}
+</script>
+
+</body>
+</html>
